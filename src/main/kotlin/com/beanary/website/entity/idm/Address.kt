@@ -7,18 +7,30 @@ import javax.persistence.*
 
 @Entity
 @Table(name = "addresses")
-class Address (
+class Address () : BaseEntity() {
 
-    @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    var id: Long? = null,
+    @Column(name = "user_id")
+    var userId: Long = 0
 
-    @Column(name = "created_at", updatable = false)
-    @CreationTimestamp
-    var createdAt: LocalDateTime,
+    @Column(name = "is_primary", nullable = false)
+    var isPrimary: Boolean = false
 
-    @Column(name = "updated_at", updatable = false)
-    @UpdateTimestamp
-    var updatedAt: LocalDateTime
-)
+    @Column(name = "address", nullable = false)
+    var address: String = ""
+
+    @Column(name = "city", nullable = false)
+    var city: String = ""
+
+    @Column(name = "state", nullable = false)
+    var state: String = ""
+
+    @Column(name = "postal", nullable = true)
+    var postal: String = ""
+
+    @Column(name = "latitude", nullable = true)
+    var latitude: String = ""
+
+    @Column(name = "longitude", nullable = true)
+    var longitude: String = ""
+
+}

@@ -9,19 +9,6 @@ import javax.persistence.*
 @Table(name = "users")
 class User(
 
-    @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    var id: Long? = null,
-
-    @Column(name = "created_at", updatable = false)
-    @CreationTimestamp
-    var createdAt: LocalDateTime,
-
-    @Column(name = "updated_at", updatable = false)
-    @UpdateTimestamp
-    var updatedAt: LocalDateTime,
-
     @Column(name = "firstname", nullable = false)
     var firstname: String? = null,
 
@@ -30,4 +17,5 @@ class User(
 
     @Column(name = "lastname", nullable = false)
     var lastname: String? = null
-)
+
+) : BaseEntity()
