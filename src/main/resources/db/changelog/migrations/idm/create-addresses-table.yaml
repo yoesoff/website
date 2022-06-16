@@ -45,16 +45,6 @@ databaseChangeLog:
                       constraints:
                         nullable: false
                   - column:
-                      name: latitude
-                      type: decimal
-                      constraints:
-                        nullable: true
-                  - column:
-                      name: longitude
-                      type: decimal
-                      constraints:
-                        nullable: true
-                  - column:
                       name: created_at
                       type: datetime
                       constraints:

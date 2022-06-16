@@ -1,36 +1,28 @@
 package com.beanary.website.entity.idm
 
-import org.hibernate.annotations.CreationTimestamp
-import org.hibernate.annotations.UpdateTimestamp
-import java.time.LocalDateTime
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.Table
 
 @Entity
 @Table(name = "addresses")
-class Address () : BaseEntity() {
+class Address(
 
     @Column(name = "user_id")
-    var userId: Long = 0
+    var userId: Long? = null,
 
     @Column(name = "is_primary", nullable = false)
-    var isPrimary: Boolean = false
+    var isPrimary: Boolean,
 
     @Column(name = "address", nullable = false)
-    var address: String = ""
+    var address: String,
 
     @Column(name = "city", nullable = false)
-    var city: String = ""
+    var city: String,
 
     @Column(name = "state", nullable = false)
-    var state: String = ""
+    var state: String,
 
     @Column(name = "postal", nullable = true)
     var postal: String = ""
-
-    @Column(name = "latitude", nullable = true)
-    var latitude: String = ""
-
-    @Column(name = "longitude", nullable = true)
-    var longitude: String = ""
-
-}
+) : BaseEntity()
