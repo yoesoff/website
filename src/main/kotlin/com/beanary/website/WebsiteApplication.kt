@@ -8,11 +8,11 @@ import org.springframework.boot.runApplication
 class WebsiteApplication
 
 fun main(args: Array<String>) {
-	runApplication<WebsiteApplication>(*args)
+    runApplication<WebsiteApplication>(*args)
 
-	try {
-		throw Exception("This is a test.")
-	} catch (e: Exception) {
-		Sentry.captureException(e)
-	}
+    try {
+        throw Exception("This is a test.")
+    } catch (e: Exception) {
+        Sentry.captureException(e)
+    }
 }
