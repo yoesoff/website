@@ -1,8 +1,6 @@
-package com.beanary.website.repo.idm
+package com.beanary.website.idm.repo
 
-import com.beanary.website.entity.idm.Address
-import com.beanary.website.entity.idm.User
-import org.springframework.data.jpa.repository.Query
+import com.beanary.website.idm.entity.User
 import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 import java.util.*

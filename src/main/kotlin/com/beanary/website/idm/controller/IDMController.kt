@@ -1,9 +1,9 @@
-package com.beanary.website.controller.idm
+package com.beanary.website.idm.controller
 
-import com.beanary.website.entity.idm.Address
-import com.beanary.website.entity.idm.User
-import com.beanary.website.repo.idm.AddressRepo
-import com.beanary.website.repo.idm.UserRepo
+import com.beanary.website.idm.entity.Address
+import com.beanary.website.idm.entity.User
+import com.beanary.website.idm.repo.AddressRepo
+import com.beanary.website.idm.repo.UserRepo
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.GetMapping
@@ -31,7 +31,7 @@ class IDMController {
     fun register(): String {
         val user: User = userRepo.save(User("Joni", "Budi", "Setiawan"))
         addressRepo.save(Address(user.id, true, "Jalan waas no. 09", "Bandung", "Jawa Barat", "65387"))
-        return "It's your IDM home buddy!"
+        return "It's your IDM register home buddy!"
     }
 
 }

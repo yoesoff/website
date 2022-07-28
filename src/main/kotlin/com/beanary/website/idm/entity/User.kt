@@ -1,5 +1,6 @@
-package com.beanary.website.entity.idm
+package com.beanary.website.idm.entity
 
+import com.beanary.website.entity.idm.BaseEntity
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Table

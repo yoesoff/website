@@ -40,7 +40,7 @@ dependencies {
     implementation("org.liquibase:liquibase-core")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("io.sentry:sentry-spring-boot-starter:6.0.0")
-    implementation("org.springframework.boot:spring-boot-starter-security")
+//    implementation("org.springframework.boot:spring-boot-starter-security")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     runtimeOnly("org.postgresql:postgresql")
